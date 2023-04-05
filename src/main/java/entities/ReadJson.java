@@ -4,7 +4,7 @@ import org.json.JSONArray;
 
 public class ReadJson {
 
-    String json = "[\n" +
+    private String json = "[\n" +
             "\t{\n" +
             "\t\t\"dia\": 1,\n" +
             "\t\t\"valor\": 22174.1664\n" +
