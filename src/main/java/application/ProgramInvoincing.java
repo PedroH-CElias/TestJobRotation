@@ -27,7 +27,7 @@ public class ProgramInvoincing {
         Optional<Double> bigger = list.stream().max(Comparator.naturalOrder());
 
         System.out.println();
-        System.out.println("Lowest billing amount: " + smaller.get());
+        System.out.println("Lowest billing amount > 0: " + smaller.get());
         System.out.println("Higher billing value: " + bigger.get());
 
         double average = 0;
