@@ -5,22 +5,13 @@ import java.util.Scanner;
 
 public class ProgramFibonacci {
 
-    public static void main(String[] args) {
-
-        Locale.setDefault(Locale.US);
-        Scanner sc =  new Scanner(System.in);
-
-        System.out.print("Enter the number of sequence numbers: ");
-        int n = sc.nextInt();
+    public static int fibonacci(int number, int contNumbers){
 
         int front = 1;
         int behind = 0;
         int cont = 0;
 
-        System.out.print("Enter a number for compare: ");
-        int number = sc.nextInt();
-
-        for(int i = 0; i<n; i++){
+        for(int i = 0; i<contNumbers; i++){
 
             front += behind;
             behind = front - behind;
@@ -31,8 +22,23 @@ public class ProgramFibonacci {
                 cont = 1;
             }
         }
+        return cont;
+    }
 
-        if (cont == 1){
+    public static void main(String[] args) {
+
+        Locale.setDefault(Locale.US);
+        Scanner sc =  new Scanner(System.in);
+
+        System.out.print("Enter the number of sequence numbers: ");
+        int n = sc.nextInt();
+
+        System.out.print("Enter a number for compare: ");
+        int number = sc.nextInt();
+
+
+
+        if (fibonacci(number, n) == 1){
             System.out.println("\nNumber " + number + " Belongs!");
         }else{
             System.out.println("\nNumber " + number + " does not belong");
